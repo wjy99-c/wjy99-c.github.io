@@ -1,25 +1,41 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
-    "version": "1.8.2",
-    "homepage": "http://huxpro.github.io",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Huxpro/huxpro.github.io"
-    },
-    "bugs": "https://github.com/Huxpro/huxpro.github.io/issues",
-    "devDependencies": {
-        "grunt": "^1.1.0",
-        "grunt-banner": "~0.2.3",
-        "grunt-contrib-less": "^2.0.0",
-        "grunt-contrib-uglify": "^4.0.1",
-        "grunt-contrib-watch": "^1.1.0"
-    },
-    "scripts": {
-        "start": "bundle exec jekyll serve -w -l --host 0.0.0.0",
-        "dev": "grunt watch & npm run start",
-        "boil": "git push boilerplate boilerplate:master",
-        "push": "git push origin master --tag"
-    }
+  "name": "jekyll-theme-so-simple",
+  "description": "A simple Jekyll theme for words and pictures.",
+  "version": "3.2.0",
+  "author": "Michael Rose",
+  "homepage": "http://mmistakes.github.io/so-simple-theme/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmistakes/so-simple-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmistakes/so-simple-theme/issues"
+  },
+  "keywords": [
+    "jekyll",
+    "theme",
+    "minimal",
+    "responsive"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "onchange": "^6.0.0",
+    "uglify-js": "^3.4.9"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 5%",
+    "IE 9"
+  ],
+  "scripts": {
+    "uglify": "uglifyjs assets/js/plugins/lity.js assets/js/plugins/jquery.smooth-scroll.js assets/js/plugins/table-of-contents.js assets/js/main.js -c -m -o assets/js/main.min.js",
+    "add-banner": "node banner.js",
+    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
+    "build:js": "npm run uglify && npm run add-banner"
+  },
+  "dependencies": {}
 }

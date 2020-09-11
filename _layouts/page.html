@@ -2,83 +2,29 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% include intro-header.html type='page' %}
-
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-        {% if site.sidebar == false %}
-<!-- NO SIDEBAR -->
-    <!-- PostList Container -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
-                {{ content }}
-            </div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                {% include featured-tags.html %}
-
-                <!-- Friends Blog -->
-                {% include friends.html %}
-            </div>
+<main id="main" class="main-content" aria-label="Content">
+  <article>
+    {% include page-image.html %}
+    <div class="page-wrapper">
+      <header class="page-header">
+        {% if page.id %}
+          {% assign title = page.title | markdownify | strip_html %}
         {% else %}
-
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			{{ content }}
-    		</div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                {% include featured-tags.html %}
-
-                <!-- Short About -->
-                {% include short-about.html %}
-
-                <!-- Friends Blog -->
-                {% include friends.html %}
-    		</div>
+          {% assign title = page.title %}
         {% endif %}
-	</div>
-</div>
+        {% if page.link %}
+          <h1 id="page-title" class="page-title"><a href="{{ page.link }}">{{ title }} <span class="link-arrow">&rarr;</span></a></h1>
+        {% else %}
+          <h1 id="page-title" class="page-title">{{ title }}</h1>
+        {% endif %}
+      </header>
+      <div class="page-content">
+        {{ content }}
 
-{% if site.page-mathjax %}
-<!-- Add support for Mathjax by Voleking-->
-<!-- If you want to see formulars well in post preview, Maybe you should add this.-->
-<!-- However, most of the time formulars may not appear in the post preview, you can delete it.-->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    }
-  });
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-{% endif %}
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</main>
