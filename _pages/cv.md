@@ -16,10 +16,16 @@ Education
 
 Work experience
 ======
-* Summer 2015: Research Assistant
+* Summer 2018: Research Assistant
   * Tsinghua University
-  * QuanFuzz: applying fuzzing technic to quantum program
+  * Applying fuzz testing to quantum program
+  * ”QuanFuzz: Fuzz Testing of Quantum Program” as co-first author
   * Supervisor: Professor Yu Jiang
+
+* Fall 2017: Research Assistant
+  * Wuhan University
+  * Use MOF to make circuit board
+  * Supervisor: Professor Hexiang Deng
 
 * Fall 2015: Research Assistant
   * Tsinghua University
