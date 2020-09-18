@@ -3,8 +3,8 @@ title: "BigFuzz: Efficient Fuzz Testing for Data Analytics using Framework Abstr
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2
 excerpt: ''
-date: 2010-10-01
-venue: 'Journal 1'
+date: 2020-09-25
+venue: 'ASE'20'
 paperurl: 'http://academicpages.github.io/files/paper2.pdf'
 citation: 'Qian Zhang, Jiyuan Wang, Muhammad Ali Gulzar, Rohan Padhye, Miryung Kim. (2020). &quot;BigFuzz: Efficient Fuzz Testing for Data Analytics using Framework Abstraction.&quot; <i>ASE 2020</i>. 1(2).'
 ---
