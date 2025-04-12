@@ -1,0 +1,204 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jiyuan Wang</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    
+    <style>
+      button.accordion {
+      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      transition: 0.3s;
+      background-color: #f8f8f8;
+      }
+      button.accordion.active, button.accordion:hover {
+      background-color: #f8f8f8;
+      }
+      button.accordion:after {
+      content: " [+] ";
+      font-size: 90%;
+      color:#777;
+      float: left;
+      margin-left: 1px;
+      }
+
+      button.accordion.active:after {
+      content: " [\2212] ";
+      }
+      div.panel {
+      padding: 0 20px;
+      margin-top: 5px;
+      display: none;
+      background-color: white;
+      font-size: 100%;
+      }
+      div.panel.show {
+      display: block !important;
+      }
+      .social-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jiyuan Wang</h1>
+        <p>CS Ph.D. Student <br>University of California, Los Angeles</p>
+
+    <h3><a href="http://web.cs.ucla.edu/~wangjiyuan/">Home</a></h3>
+        <h3><a href="https://web.cs.ucla.edu/~wangjiyuan/research.html">Research</a></h3>
+    <h3><a href="https://web.cs.ucla.edu/~wangjiyuan/research/CV.pdf">CV</a></h3>  
+        <h3><a href="https://web.cs.ucla.edu/~wangjiyuan/personal.html">Personal</a></h3>
+    <b>Social</b><br>
+        <div class="social-row">
+          <a href="mailto:wangjiyuan@cs.ucla.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+          <a href="https://scholar.google.com/citations?user=YFsKZUkAAAAJ&hl=en" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
+          <a href="http://github.com/wjy99-c"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
+          <a href="https://www.linkedin.com/in/jiyuan-wang-524890196" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br>
+          <br>
+        </div>
+        <br>
+
+    <p><b>Contact:</b><br>Department of Computer Science<br>University of California, Los Angeles<br>Remote now</p>
+      </header>
+<section>
+      <img src="profile.png" height="550" width="360" alt="Jiyuan Wang">
+      <p>I am a second year Ph.D. student in Computer Science Department at University of California, Los Angeles. I am designing testing and program synthesis method for big data analytic and FPGA. I am a member of <a href="http://systems.cs.ucla.edu/index.html">SOLAR group</a> and co-advised by Professor <a href="https://web.cs.ucla.edu/~miryung/">Miryung Kim</a> and Professor <a href="http://web.cs.ucla.edu/~harryxu/">Harry Xu</a>. </p>
+      </section>
+      <section>
+
+    <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/ASE2021_QDiff.pdf">QDiff: Differential Testing for Quantum Software Stacks</a> <br> By <b>Jiyuan Wang</b>, Qian Zhang, Harry Xu, Miryung Kim <br> <i>The 36th IEEE/ACM International Conference on Automated Software Engineering</i>, ASE 2021. <br><button class="accordion"> 
+       Abstract   
+        </button>   
+        <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> The past few years have witnessed the proliferation of quantum software stacks (QSS) developed in response to rapid hardware advances in quantum computing. 
+      A QSS includes a quantum programming language, an optimizing compiler that compiles a quantum algorithm expressed in a high-level language into quantum gate instructions, 
+      a quantum simulator that emu- lates these instructions on a classical device, the control software that turns circuits into analog signals sent to the quantum computer,
+       and execution on very expensive quantum hardware. In comparison to traditional compilers and architecture simulators, QSSes are difficult to tests due to the probabilistic nature of results,
+        the lack of clear hardware specifications, and quantum programming complexity. This work devises a novel differential testing approach for QSSes, named QDIFF with three major innovations: 
+        (1) We generate input programs to be tested via semantics-preserving, source to source transformation to explore program variants. (2) We speed up differential testing by filtering out quantum circuits that are not worthwhile to execute on quantum hardware 
+        by analyzing static characteristics such as circuit depth, 2-gate operations, gate error rates, and T1 relaxation time. 
+      (3) We design an extensible equivalence checking mechanism via distribution comparison functions such as Kolmogorov–Smirnov test and cross entropy. </p></div>
+        <p style="margin:0"><button class="accordion">
+      Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/wjy99-c/QDiff"><href="https://github.com/wjy99-c/QDiff">Data &amp; code for replication</a> </p></div> 
+   
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/FSE2021_heterofuzz.pdf">HeteroFuzz: Fuzz Testing to Detect Platform Dependent Divergence for Heterogeneous Applications</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Miryung Kim <br> <i>The 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</i>, ESEC/FSE 2021 <br><button class="accordion"> 
+       Abstract   
+        </button>   
+        <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We propose a novel fuzz testing technique, called heterofuzz, designed to specifically target heterogeneous applications and to detect platform-dependent divergence. The key essence of heterofuzz is that it uses three-pronged approaches to reduce the long latency of repetitively invoking a hardware simulator on a heterogeneous application. First, in addition to monitoring code coverage as a fuzzing guidance mechanism, we analyze synthesis pragmas in kernel code and monitor accelerator-relevant value spectra. Second, we design dynamic probabilistic mutations to increase the chance of hitting divergent behavior under different platforms. Third, we memorize the boundaries of seen kernel inputs and skip HLS simulator invocation if it can expose only redundant divergent behavior. We evaluate heterofuzz on seven real-world heterogeneous applications with FPGA kernels. heterofuzz is 754X faster in exposing the same set of distinct divergence symptoms than naive fuzzing. Probabilistic mutations contribute to 17.5X speed up than the one without. Selective invocation of HLS simulation contributes to 8.8X speed up than the one without. </p></div>
+        <p style="margin:0"><button class="accordion">
+      Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://zenodo.org/record/4563712#.YNSwDDZKj0o"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4563712.svg" alt="DOI"></a> </p></div>
+
+    <p style="margin:0"><button class="accordion">
+      Other versions
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://arxiv.org/abs/1810.10310?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529"> arXiv</a> (Oct 2018) </p></div><br>
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://doi.org/10.3368/jhr.monopsony.0219-10013R2">Efficient Fuzz Testing for Apache Spark Using Framework Abstraction</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Muhammad Ali Gulzar, Rohan Padhye, Miryung Kim<br><i>The 43rd IEEE/ACM International Conference on Software Engineering</i>, Demonstrations, ICSE 2021. <br><button class="accordion"> 
+    Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p> Tool paper for BigFuzz</p></div>
+    <p style="margin:0"><button class="accordion">
+      Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> 
+      <a href="https://github.com/qianzhanghk/BigFuzz">Data &amp; code for replication</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      Video
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> 
+      <a href="https://www.youtube.com/watch?v=YvYQISILQHs">video </a> </p></div>
+     
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.journals.uchicago.edu/doi/10.1086/713744">BigFuzz: Efficient Fuzz Testing for Data Analytics using Framework Abstraction</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Muhammad Ali Gulzar, Rohan Padhye, and Miryung Kim<br> <i>The 35th IEEE/ACM International Conference on Automated Software Engineering</i>, ASE 2020. <br><button class="accordion"> 
+    Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We propose a novel coverage-guided fuzz testing tool for big
+      data analytics, called BigFuzz. The key essence of our approach is that: (a) we focus on exercising application logic as opposed to
+      increasing framework code coverage by abstracting the DISC framework using specifications. BigFuzz performs automated source to
+      source transformations to construct an equivalent DISC application
+      suitable for fast test generation, and (b) we design schema-aware
+      data mutation operators based on our in-depth study of DISC application error types. BigFuzz speeds up the fuzzing time by 78 to
+      1477X compared to random fuzzing, improves application code
+      coverage by 20% to 271%, and achieves 33% to 157% improvement
+      in detecting application errors. When compared to the state of the
+      art that uses symbolic execution to test big data analytics, BigFuzz
+      is applicable to twice more programs and can find 81% more bugs. </p></div>
+    <p style="margin:0"><button class="accordion">
+      Replication files
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/qianzhanghk/BigFuzz">Data &amp; code for replication</a> </p></div>
+    <p style="margin:0"><button class="accordion">
+      Video
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://drive.google.com/file/d/12CRdUf1NaJ7T6v4k0BZ19halQX_ducYH/view"> video </a> </p></div>
+
+    <hr>
+    <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Works in Progress</h2>
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold"> Program Synthesis for HeteroComputing</a> <br> <i>In progress</i> (updated Aug 2, 2021) <br><button class="accordion"> 
+    Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We want to use pattern-based approach to automatically generate desired FPGA code. </p></div>
+   <hr>
+        <h2><a id="poster" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Poster</h2>
+        <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://ieeexplore.ieee.org/document/9438606">Poster: Fuzz Testing of Quantum Program</a> <br> By <b>Jiyuan Wang</b>, Fuchen Ma, Yu Jiang <br> <i> 14th IEEE Conference on Software Testing, Verification and Validation</i>, ICST 2021, <b>Best Poster</b><br><button class="accordion">
+          Abstract
+        </button>
+        <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> In this paper, we present QuanFuzz, a search-based test input generator for quantum program. We define the quantum sensitive information to evaluate test input for quantum program and use matrix generator to generate test cases with higher coverage. First, we extract quantum sensitive information -- measurement operations on those quantum registers and the sensitive branches associated with those measurement results, from the quantum source code. Then, we use the sensitive information guided algorithm to mutate the initial input matrix and select those matrices which improve the probability weight for a value of the quantum register to trigger the sensitive branch. The process keeps iterating until the sensitive branch triggered. We tested QuanFuzz on benchmarks and acquired 20% - 60% more coverage compared to traditional testing input generation.</p></div>
+        
+        <p style="margin:0"><button class="accordion">
+          Other versions
+        </button>
+        <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://arxiv.org/abs/1810.10310?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%253A+arxiv%252FQSXk+%2528ExcitingAds%2521+cs+updates+on+arXiv.org%2529"> arXiv</a> (Oct 2018) </p></div>
+    
+        </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+<script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
+  </body>
+</html>
