@@ -78,12 +78,12 @@
         <p>CS Ph.D. <br>University of California, Los Angeles</p>
 
 
-    <h3><a href="http://github.com/wjy99-c">Home</a></h3>
-    <h3><a href="https://wjy99-c.github.io/research/CV.pdf">CV</a></h3>  
-        <h3><a href="https://web.cs.ucla.edu/~wangjiyuan/personal.html">Personal</a></h3>
+    <h3><a href="https://www.cs.tulane.edu/~wjiyuan/">Home</a></h3>
+    <h3><a href="https://www.cs.tulane.edu/~wjiyuan/research/cv.pdf">CV</a></h3>  
+        <h3><a href="https://www.cs.tulane.edu/~wjiyuan/personal.html">Personal</a></h3>
     <b>Social</b><br>
         <div class="social-row">
-          <a href="mailto:wangjiyuan@cs.ucla.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+          <a href="mailto:wjiyuan@tulane.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
           <a href="https://scholar.google.com/citations?user=YFsKZUkAAAAJ&hl=en" target="_blank"><i class="ai ai-fw ai-google-scholar-square"></i> Scholar</a><br>
           <a href="http://github.com/wjy99-c"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
           <a href="https://www.linkedin.com/in/jiyuan-wang-524890196" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br>
@@ -95,14 +95,14 @@
       </header>
       <section>
       <img src="profile.png" height="396" width="306" alt="Jiyuan Wang">
-      <p>I'm currently an Assistant Professor at Tulane University. Before that, I was an applied scientist at AWS identity. I earned my PhD in Computer Science Department at University of California, Los Angeles. I am designing testing and debug method for big data analytic and FPGA. I was a member of <a href="http://systems.cs.ucla.edu/index.html">SOLAR group</a> and co-advised by Professor <a href="https://web.cs.ucla.edu/~miryung/">Miryung Kim</a> and Professor <a href="http://web.cs.ucla.edu/~harryxu/">Harry Xu</a>. Finished my defense! Check my defense slide if you are insterested<a href="https://web.cs.ucla.edu/~wangjiyuan/research/defense.pptx"> slide</a></p>
+      <p>I'm currently an Assistant Professor at Tulane University. Before that, I was an applied scientist at AWS identity. I earned my PhD in Computer Science Department at University of California, Los Angeles. I am designing testing and debug method for big data analytic and FPGA. I was a member of <a href="http://systems.cs.ucla.edu/index.html">SOLAR group</a> and co-advised by Professor <a href="https://web.cs.ucla.edu/~miryung/">Miryung Kim</a> and Professor <a href="http://web.cs.ucla.edu/~harryxu/">Harry Xu</a>. Finished my defense! Check my defense slide if you are insterested<a href="https://www.cs.tulane.edu/~wjiyuan/research/defense.pptx"> slide</a></p>
       <p><b>I joined the Department of Computer Science at Tulane University as an Assistant Professsor in the Fall 2025. I'm looking for students who want to work on Softwrae Engineering and Quantum Computing. Feel free to email me if you are insterested!</b></p>
       </section>
 
       <section>
 
     <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
-<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/DuoReduce_FSE2025.pdf">DuoReduce: Bug Isolation for Multi-Layer Extensible Compilation</a> <br> By <b>Jiyuan Wang</b>, Yuxin Qiu, Ben Limpanukorn, Hong Jin Kang, Qian Zhang, Miryung Kim <br> <i>The 33rd ACM International Conference on the Foundations of Software Engineering</i>, FSE 2025. <br><button class="accordion">
+<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/DuoReduce_FSE2025.pdf">DuoReduce: Bug Isolation for Multi-Layer Extensible Compilation</a> <br> By <b>Jiyuan Wang</b>, Yuxin Qiu, Ben Limpanukorn, Hong Jin Kang, Qian Zhang, Miryung Kim <br> <i>The 33rd ACM International Conference on the Foundations of Software Engineering</i>, FSE 2025. <br><button class="accordion">
        Abstract
         </button><div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p>In recent years, the MLIR platform has had explosive growth due to the need of building extensible deep learning compilers and hardware accelerator compilers. Such examples include Triton, CIRCT, and ONNX-MLIR. MLIR compilers introduce significant complexities in localizing bugs or inefficiencies because of their layered optimization and transformation process with compilation passes. While existing delta debugging techniques can be used to identify a minimum subset of IR code that reproduces a given bug symptom, their naive application to MLIR is time-consuming, because real-world MLIR compilers usually involve a large number of compilation passes and compiler developers must also identify a minimized set of relevant compilation passes simultaneously, in order to reduce the footprint of MLIR compiler code to be inspected for a bug fix. We propose DuoReduce, a dual-dimensional reduction approach for MLIR bug localization. DuoReduce leverages three key ideas in tandem to design an efficient MLIR debugger. First, DuoReduce reduces the bug-irrelevant compilation passes by identifying ordering dependencies among different compilation passes. Second, DuoReduce uses MLIR-semantics aware transformations to expedite IR code reduction. Finally, DuoReduce leverages cross-dependence between the IR code dimension and the compilation pass dimension by accounting for which IR code segments are related to which compilation passes to reduce the unused passes.
 
@@ -112,7 +112,7 @@ Experiments with three large-scale MLIR compiler projects find that DuoReduce ou
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/wjy99-c/DuoReduce"><href="https://github.com/wjy99-c/DuoReduce">Data &amp; code for replication</a> </p></div>
 
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/ICSE2025_SynthFuzz.pdf">Fuzzing MLIR Compilers with Custom Mutation Synthesis</a> <br> By Ben Limpanukorn, <b>Jiyuan Wang</b>, Hong Jin Kang, Zitong Zhou, Miryung Kim <br> <i>The 47th IEEE/ACM International Conference on Software Engineering</i>, ICSE 2025. <br><button class="accordion">
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/ICSE2025_SynthFuzz.pdf">Fuzzing MLIR Compilers with Custom Mutation Synthesis</a> <br> By Ben Limpanukorn, <b>Jiyuan Wang</b>, Hong Jin Kang, Zitong Zhou, Miryung Kim <br> <i>The 47th IEEE/ACM International Conference on Software Engineering</i>, ICSE 2025. <br><button class="accordion">
        Abstract
         </button><div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Compiler technologies in deep learning and domain-specific hardware acceleration are increasingly adopting extensible compiler frameworks such as Multi-Level Intermediate Representation (MLIR) to facilitate more efficient development. With MLIR, compiler developers can easily define their own custom IRs in the form of MLIR dialects. However, the diversity and rapid evolution of such custom IRs make it impractical to manually write a custom test generator for each dialect.
 To address this problem, we design a new test generator called SYNTHFUZZ that combines grammar-based fuzzing with custom mutation synthesis. The key essence of SYNTHFUZZ is two
@@ -125,7 +125,7 @@ time spent fuzzing dialect-specific code</p></div>
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/UCLA-SEAL/SynthFuzz"><href="https://github.com/UCLA-SEAL/SynthFuzz">Data &amp; code for replication</a> </p></div>
 
-<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/FSE2023_HFuzz.pdf">Leveraging Hardware Probes and Optimizations for Accelerating Fuzz Testing of Heterogeneous Applications</a> <br> By <b>Jiyuan Wang</b>, Qian Zhang, Hongbo Rong, Guoqing Harry Xu, Miryung Kim <br> <i>The 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</i>, ESEC/FSE 2023. <br><button class="accordion">
+<p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/FSE2023_HFuzz.pdf">Leveraging Hardware Probes and Optimizations for Accelerating Fuzz Testing of Heterogeneous Applications</a> <br> By <b>Jiyuan Wang</b>, Qian Zhang, Hongbo Rong, Guoqing Harry Xu, Miryung Kim <br> <i>The 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</i>, ESEC/FSE 2023. <br><button class="accordion">
        Abstract
         </button><div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> There is a growing interest in the computer architecture community to incorporate heterogeneity and specialization to improve performance. Developers can create heterogeneous applications that consist of both host code and kernel code, where compute-intensive kernels can be offloaded from CPU to hardware accelerators. Testing such applications on real heterogeneous architectures is extremely challenging as kernels are black boxes, providing no information about the kernels’ internal execution to diagnose issues such as silent hangs or unexpected results. Additionally, inputs for heterogeneous applications are often large matrices, leading to a vast search space for identifying bug-revealing inputs.
 
@@ -137,7 +137,7 @@ input space exploration. By incorporating HW probes in tandem with SW monitors, 
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/wjy99-c/HFuzz"><href="https://github.com/wjy99-c/HFuzz">Data &amp; code for replication</a> </p></div>
 
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/ASPLOS2022_HeteroGen.pdf">HeteroGen: Transpiling C to Heterogeneous HLS Code with Automated Test Generation and Program Repair</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Guoqing Harry Xu, Miryung Kim <br> <i>The 22nd Conference on Architectural Support for Programming Languages and Operating Systems</i>, ASPLOS 2022. <br><button class="accordion">
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/ASPLOS2022_HeteroGen.pdf">HeteroGen: Transpiling C to Heterogeneous HLS Code with Automated Test Generation and Program Repair</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Guoqing Harry Xu, Miryung Kim <br> <i>The 22nd Conference on Architectural Support for Programming Languages and Operating Systems</i>, ASPLOS 2022. <br><button class="accordion">
        Abstract
         </button><div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> Despite the trend of incorporating heterogeneity and specialization
 in hardware, the development of heterogeneous applications is limited to a handful of engineers with deep hardware expertise. We
@@ -156,7 +156,7 @@ branch coverage for the original C code.</p></div>
     </button>
     <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://github.com/UCLA-SEAL/HeteroGen"><href="https://github.com/UCLA-SEAL/HeteroGen">Data &amp; code for replication</a> </p></div>
 
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/ASE2021_QDiff.pdf">QDiff: Differential Testing for Quantum Software Stacks</a> <br> By <b>Jiyuan Wang</b>, Qian Zhang, Guoqing Harry Xu, Miryung Kim <br> <i>The 36th IEEE/ACM International Conference on Automated Software Engineering</i>, ASE 2021. <b>SIGSOFT reseach highlight!</b> <br><button class="accordion"> 
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/ASE2021_QDiff.pdf">QDiff: Differential Testing for Quantum Software Stacks</a> <br> By <b>Jiyuan Wang</b>, Qian Zhang, Guoqing Harry Xu, Miryung Kim <br> <i>The 36th IEEE/ACM International Conference on Automated Software Engineering</i>, ASE 2021. <b>SIGSOFT reseach highlight!</b> <br><button class="accordion"> 
        Abstract   
         </button>   
         <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> The past few years have witnessed the proliferation of quantum software stacks (QSS) developed in response to rapid hardware advances in quantum computing. 
@@ -174,9 +174,9 @@ branch coverage for the original C code.</p></div>
     <p style="margin:0"><button class="accordion">
      Slides
     </button>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://web.cs.ucla.edu/~wangjiyuan/research/QDiff_for_ase.pdf">Slides</a> </p></div>
-    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://web.cs.ucla.edu/~wangjiyuan/research/QDiff_for_ase.pdf">Slides for ASE</a> </p></div>
-    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://web.cs.ucla.edu/~wangjiyuan/research/FSE2021_heterofuzz.pdf">HeteroFuzz: Fuzz Testing to Detect Platform Dependent Divergence for Heterogeneous Applications</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Miryung Kim <br> <i>The 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</i>, ESEC/FSE 2021 <br><button class="accordion"> 
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://www.cs.tulane.edu/~wjiyuan/research/QDiff_for_ase.pdf">Slides</a> </p></div>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> <a href="https://www.cs.tulane.edu/~wjiyuan/research/QDiff_for_ase.pdf">Slides for ASE</a> </p></div>
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://www.cs.tulane.edu/~wjiyuan/research/FSE2021_heterofuzz.pdf">HeteroFuzz: Fuzz Testing to Detect Platform Dependent Divergence for Heterogeneous Applications</a> <br> By Qian Zhang, <b>Jiyuan Wang</b>, Miryung Kim <br> <i>The 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</i>, ESEC/FSE 2021 <br><button class="accordion"> 
        Abstract   
         </button>   
         <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> We propose a novel fuzz testing technique, called heterofuzz, designed to specifically target heterogeneous applications and to detect platform-dependent divergence. The key essence of heterofuzz is that it uses three-pronged approaches to reduce the long latency of repetitively invoking a hardware simulator on a heterogeneous application. First, in addition to monitoring code coverage as a fuzzing guidance mechanism, we analyze synthesis pragmas in kernel code and monitor accelerator-relevant value spectra. Second, we design dynamic probabilistic mutations to increase the chance of hitting divergent behavior under different platforms. Third, we memorize the boundaries of seen kernel inputs and skip HLS simulator invocation if it can expose only redundant divergent behavior. We evaluate heterofuzz on seven real-world heterogeneous applications with FPGA kernels. heterofuzz is 754X faster in exposing the same set of distinct divergence symptoms than naive fuzzing. Probabilistic mutations contribute to 17.5X speed up than the one without. Selective invocation of HLS simulation contributes to 8.8X speed up than the one without. </p></div>
