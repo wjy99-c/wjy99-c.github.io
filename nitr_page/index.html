@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITR: Needle in the Repo</title>
+    <meta
+      name="description"
+      content="Needle in the Repo (NITR) is a repository-level benchmark for diagnosing maintainability failures in AI-generated code edits."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="topbar">
+          <div class="brand">NITR</div>
+          <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#results">Results</a>
+            <a href="#benchmark">Benchmark</a>
+            <a href="#usage">Usage</a>
+            <a href="#citation">Citation</a>
+          </div>
+        </nav>
+
+        <section class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Repository-Level Maintainability Benchmark</p>
+            <h1>Needle in the Repo</h1>
+            <p class="subtitle">
+              Diagnosing maintainability failures in AI-generated repository edits.
+            </p>
+            <p class="authors">
+              Haichao Zhu, Qian Zhang, Jiyuan Wang, Zhaorui Yang, and Yuxin Qiu
+            </p>
+
+            <div class="cta-row">
+              <a class="button primary" href="https://arxiv.org/abs/2603.27745">Read Paper</a>
+              <a class="button secondary" href="https://www.cs.ucr.edu/~qzhang/nitr.html">Project Page</a>
+              <a class="button secondary" href="https://github.com/ucr-riple/NITR">GitHub</a>
+            </div>
+
+            <p class="tldr">
+              <span>TL;DR</span> NITR is a C++ repository-level benchmark that
+              tests whether coding systems preserve maintainable structure, not
+              just behavioral correctness. It pairs natural multi-file change
+              requests with functional tests and structural oracles to expose
+              hidden architectural shortcuts.
+            </p>
+
+            <div class="logo-row">
+              <img src="assets/ucr.png" alt="UC Riverside logo">
+              <img src="assets/tulane.png" alt="Tulane University logo">
+            </div>
+          </div>
+
+          <figure class="hero-figure">
+            <img src="assets/teaser.png" alt="NITR teaser figure">
+            <figcaption>
+              NITR focuses on the gap between task completion and maintainable
+              repository evolution.
+            </figcaption>
+          </figure>
+        </section>
+      </header>
+
+      <main>
+        <section class="stats-strip" aria-label="Key results">
+          <article>
+            <strong>21</strong>
+            <span>Curated C++ cases</span>
+          </article>
+          <article>
+            <strong>9</strong>
+            <span>Maintainability dimensions</span>
+          </article>
+          <article>
+            <strong>23</strong>
+            <span>Evaluated coding configurations</span>
+          </article>
+          <article>
+            <strong>64 / 483</strong>
+            <span>Behaviorally correct but structurally wrong outcomes</span>
+          </article>
+        </section>
+
+        <section class="content-grid" id="overview">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h2>Why NITR exists</h2>
+          </div>
+          <div class="prose-card">
+            <p>
+              Existing coding-agent evaluations often stop at pass/fail
+              correctness. In practice, however, a repository edit can pass the
+              target tests while still making the codebase harder to extend,
+              test, or reason about.
+            </p>
+            <p>
+              NITR turns this gap into an executable benchmark. Each case is a
+              small repository scenario with a natural engineering request, a
+              maintainable solution path, and a plausible shortcut path. Public
+              evaluators combine functional tests with structural oracles, so
+              the benchmark measures both whether the task works and whether the
+              resulting design remains healthy.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-grid" id="results">
+          <div class="section-heading">
+            <p class="eyebrow">Results</p>
+            <h2>Performance drops sharply when structure matters</h2>
+          </div>
+          <div class="figure-card">
+            <img src="assets/result_heatmap.png" alt="Pass fail heatmap across NITR cases">
+            <p class="caption">
+              Pass/fail heatmap of 23 evaluated configurations across the 21
+              NITR cases.
+            </p>
+          </div>
+          <div class="callout-grid">
+            <article class="callout">
+              <h3>Best overall pass rate</h3>
+              <p>57.1% of cases.</p>
+            </article>
+            <article class="callout">
+              <h3>Average across all systems</h3>
+              <p>36.2% of cases.</p>
+            </article>
+            <article class="callout">
+              <h3>Micro vs. multi-step</h3>
+              <p>53.5% on micro cases, but only 20.6% on multi-step cases.</p>
+            </article>
+            <article class="callout">
+              <h3>Hardest pressures</h3>
+              <p>Dependency control and responsibility decomposition remain the biggest failure surfaces.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-grid" id="benchmark">
+          <div class="section-heading">
+            <p class="eyebrow">Benchmark Design</p>
+            <h2>What the benchmark contains</h2>
+          </div>
+          <div class="two-column">
+            <div class="list-card">
+              <h3>Repository contents</h3>
+              <ul>
+                <li>21 starter cases under <code>cases/</code></li>
+                <li>Case specifications and design notes under <code>docs/</code></li>
+                <li>Public evaluator logic under <code>evaluator/</code></li>
+                <li>Agent-facing task statements such as <code>TASK.md</code> and <code>TASK1.md</code></li>
+              </ul>
+            </div>
+            <div class="list-card">
+              <h3>Maintainability pressures</h3>
+              <ul>
+                <li>Change locality</li>
+                <li>Reuse and repository awareness</li>
+                <li>Responsibility decomposition</li>
+                <li>Extension structure and dependency control</li>
+                <li>Testability, determinism, and side-effect isolation</li>
+                <li>State ownership and lifecycle discipline</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid" id="usage">
+          <div class="section-heading">
+            <p class="eyebrow">Usage</p>
+            <h2>How to run NITR</h2>
+          </div>
+          <div class="two-column">
+            <div class="prose-card">
+              <p>
+                The public release does not include a hosted submission service.
+                In the open benchmark, a submission means editing the selected
+                case locally and running the provided public evaluator.
+              </p>
+              <p>
+                This works equally well for API-based coding agents, agentic
+                coding tools, and web-chat systems, as long as you apply the
+                generated edits back into the repository before evaluation.
+              </p>
+            </div>
+            <div class="code-card">
+              <pre><code>cmake -S . -B build \
+  -DNITR_BUILD_ALL_CASES=OFF \
+  -DNITR_CASE=002.refactor-and-resue \
+  -DNITR_BUILD_EVALUATOR=ON
+
+cmake --build build
+ctest --test-dir build --output-on-failure</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-grid" id="citation">
+          <div class="section-heading">
+            <p class="eyebrow">Citation</p>
+            <h2>BibTeX</h2>
+          </div>
+          <div class="code-card wide">
+            <pre><code>@misc{zhu2026nitr,
+  title        = {Needle in the Repo: Diagnosing Maintainability Failures in AI-Generated Repository Edits},
+  author       = {Haichao Zhu and Qian Zhang and Jiyuan Wang and Zhaorui Yang and Yuxin Qiu},
+  year         = {2026},
+  eprint       = {2603.27745},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.SE},
+  url          = {https://arxiv.org/abs/2603.27745}
+}</code></pre>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
